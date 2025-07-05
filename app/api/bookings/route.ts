@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
     })
 
     // Convert BigInt to string for JSON serialization
-    const serializedBookings = bookings.map(booking => ({
+    const serializedBookings = bookings.map((booking: any) => ({
       ...booking,
       id: booking.id.toString(),
     }))
